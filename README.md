@@ -14,6 +14,7 @@ A code editor written for love2d, no guarentee its 100% stable tho. Remember tha
 - This list (i put a full 5 minutes into this)
 
 ### things i want to do that i just havent yet
+- utf8 support
 - Undo/Redo and undo history
 - Draggable scrollbars
 - Better documentation
