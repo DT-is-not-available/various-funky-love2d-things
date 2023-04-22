@@ -13,7 +13,7 @@ A code editor written for love2d, no guarentee its 100% stable tho. Remember tha
 - 99% Control (little to no internals hidden)
 - This list (i put a full 5 minutes into this)
 
-### thinsg i want to do that i just havent yet
+### things i want to do that i just havent yet
 - Undo/Redo and undo history
 - Draggable scrollbars
 - Better documentation
