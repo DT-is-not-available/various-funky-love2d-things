@@ -33,7 +33,7 @@ return function(w, h, style)
 	--- The canvas the editor draws to before drawing to the screen.
 	self.canvas = lg.newCanvas(w or lg.getWidth(), h or lg.getHeight())
 
-	local font = lg.newFont("RobotoMono-Regular.ttf", style.font_size)
+	local font = lg.newFont("RobotoMono-Regular.ttf", (style.font_size or 14)*2)
 
 	if font:getWidth('W') ~= font:getWidth('|') then
 		error("editor: font must be monospace")
@@ -81,7 +81,7 @@ return function(w, h, style)
 	function self:set_style(style_table)
 		style = style_table
 		setmetatable(style, style_mt)
-		font = lg.newFont("RobotoMono-Regular.ttf", style.font_size)
+		font = lg.newFont("RobotoMono-Regular.ttf", style.font_size or 14)
 
 		if font:getWidth('W') ~= font:getWidth('|') then
 			error("editor: font must be monospace")
@@ -435,7 +435,8 @@ return function(w, h, style)
 	--- @param text string
 	function self:textinput(text)
 		self:delete_selected()
-		self:insert_raw_text_on_line(text:gsub("\t","    "))
+		local str = text:gsub("\t","    ")
+		self:insert_raw_text_on_line(str)
 		self:deselect()
 		self:set_max_scroll_x()
 		self:autoscroll_horizontally()
