@@ -12,6 +12,7 @@ return function(w, h, style)
 		current_line = {0.2, 0.2, 0.2},
 		current_line_number = {0.85, 0.85, 0.85},
 		selection = {0.15, 0.65, 1, 0.35},
+		current_line_style = 1,
 
 		token_string = {206/255, 145/255, 120/255},
 		token_blue = {62/255, 156/255, 214/255},
